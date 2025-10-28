@@ -47,4 +47,34 @@ public class Vehicle extends Asset{
         this.odometer = odometer;
     }
 
+    @Override
+    public double getValue(){
+        int currentYear = 2025;
+        int age = currentYear - year;
+        double value = getOriginalCost();
+
+
+        if(age <= 3){
+            value -= value * 0.03 * age;
+        } else if (age <= 6) {
+            value -= value * 0.06 * age;
+        } else if (age <= 10){
+            value -= value * 0.08 * age;
+        } else{
+            value -= 1000;
+        }
+//honda or toyota
+
+        String makeModelLower = makeModel.toLowerCase();
+        if(odometer > 100000 && !(makeModelLower.contains("honda")
+                || makeModelLower.contains("toyota"))); {
+                    value *= 0.75;
+        }
+
+        //value never = - , make 0
+        return value < 0 ? 0: value;
+
+
+    }
 }
+

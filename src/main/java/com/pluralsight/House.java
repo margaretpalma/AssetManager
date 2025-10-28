@@ -1,7 +1,7 @@
 package com.pluralsight;
 
 
-public class House extends Asset{
+public class House extends Asset {
 
     private String address;
     private int condition;
@@ -9,9 +9,9 @@ public class House extends Asset{
     private int lotSize;
 
 
-   //todo: constructor
+    //todo: constructor
     public House(String description, String dateAcquired, Double originalCost,
-                 String address, int condition, int squareFoot, int lotSize){
+                 String address, int condition, int squareFoot, int lotSize) {
         super(description, dateAcquired, originalCost);
         this.address = address;
         this.condition = condition;
@@ -20,6 +20,7 @@ public class House extends Asset{
 
     }
 
+    //getters and setters
     public String getAddress() {
         return address;
     }
@@ -52,4 +53,11 @@ public class House extends Asset{
         this.lotSize = lotSize;
     }
 
+//    //todo: @override
+//    @Override
+//    public double getValue(){
+//
+//        double basePricePerSqFt;
+//
+//    }
 }
