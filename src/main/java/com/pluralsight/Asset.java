@@ -1,14 +1,18 @@
 package com.pluralsight;
 
-
 public class Asset {
 
     private String description;
     private String dateAcquired;
     private double originalCost;
 
+    //constructor
+    public Asset(String description, String dateAcquired, Double originalCost){
+        this.description = description;
+        this.dateAcquired = dateAcquired;
+        this.originalCost = originalCost;
 
-    //todo: constructor
+    }
 
 
     public String getDescription() {

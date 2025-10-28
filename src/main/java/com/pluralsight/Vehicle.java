@@ -9,6 +9,16 @@ public class Vehicle extends Asset{
 
 
     //todo: constructor
+    public Vehicle(String description, String dateAcquired, Double originalCost,
+                   String makeModel, int year, int odometer){
+
+        //has to be in order
+        super(description, dateAcquired, originalCost);
+        this.makeModel = makeModel;
+        this.year = year;
+        this.odometer = odometer;
+
+    }
 
 
     //getters and setters
@@ -36,4 +46,5 @@ public class Vehicle extends Asset{
     public void setOdometer(int odometer) {
         this.odometer = odometer;
     }
+
 }
