@@ -60,16 +60,20 @@ public class House extends Asset {
 
         switch (condition){
             case 1:
-            priceperSqFt = 180;             //excellent
+            priceperSqFt = 180;
+                System.out.println("Excellent Condition ");//excellent
             break;
             case 2:
-                priceperSqFt = 130;            //fair
+                priceperSqFt = 130;
+                System.out.println("Good Condition");//fair
                 break;
             case 3:
                 priceperSqFt = 90;
+                System.out.println("Fair Condition");
                 break;
             case 4:
                 priceperSqFt = 80;
+                System.out.println("Poor Condition");
                 break;
             default:
                 priceperSqFt = 0;
@@ -78,10 +82,14 @@ public class House extends Asset {
 
     }
 
-//    @Override
-//    public double getValue(){
-//
-//        double basePricePerSqFt;
-//
+    @Override
+    public String toString() {
+        return super.toString() +
+                "Address: " + address + "\n" +
+                "Condition: " + condition + "\n" +
+                "Square Foot: " + squareFoot + "\n" +
+                "Lot Size: " + lotSize;
+    }
+
 //    }
 }

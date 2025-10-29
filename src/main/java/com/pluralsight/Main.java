@@ -12,15 +12,15 @@ public class Main {
         assets.add(new House("Main home", "August", 252520.0, "356 Happy Lane", 3, 345, 23));
         assets.add(new House("Second home", "September", 230000.0, "200 Charlotte Rd", 1, 25, 150));
 
-        assets.add(new Vehicle("1.", "July", 2500.00, "Honda CRV", 2014, 450000));
-        assets.add(new Vehicle("2.", "October", 4500.00, "Ford Focus", 2025,250000));
-        assets.add(new Vehicle("3.", "September", 5500.00, "Dodge Charger", 2024, 89500));
+
+        assets.add(new Vehicle("Vehicle", "July", 2500.00, "Honda CRV", 2014, 450000));
+        assets.add(new Vehicle("Vehicle", "October", 4500.00, "Ford Focus", 2025,250000));
+        assets.add(new Vehicle("Vehicle", "September", 5500.00, "Dodge Charger", 2024, 89500));
 
 
         for(Asset a : assets) {
-            System.out.println(a.getDescription()
-                                + " - Value: $"
-                                + a.getValue());
+            System.out.println(a);
+            System.out.println();
         }
     }
 }

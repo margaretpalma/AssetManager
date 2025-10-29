@@ -43,4 +43,13 @@ public class Asset {
         return originalCost;
 
  }
-}
+
+    @Override
+    public String toString() {
+        return "Description: " + description + "\n" +
+                "Date Acquired: " + dateAcquired + "\n" +
+                "Original Cost: $" + originalCost + "\n" +
+                "Current Value: $" + getValue();
+    }
+    }
+
